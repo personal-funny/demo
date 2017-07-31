@@ -23,7 +23,7 @@ public interface SampleDAO {
     @Delete("DELETE FROM user WHERE id = #{id}")
     public void delete(UserDO user);
 
-    @Update("UPDATE user SET user_name = #{userName}, password = #{password}, description = #{description}")
+    @Update("UPDATE user SET user_name = #{userName}, password = #{password}, description = #{description} WHERE id = #{id}")
     public void update(UserDO user);
 
     @Select("SELECT * FROM user WHERE id = #{id}")
