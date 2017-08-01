@@ -6,9 +6,9 @@ import org.springframework.beans.BeanUtils;
 
 /**
  * @author lx48475
- * @version Id: UserMapper.java, v 0.1 2017年08月01 11:29 lx48475 Exp $
+ * @version Id: UserTransfer.java, v 0.1 2017年08月01 11:29 lx48475 Exp $
  */
-public class UserMapper {
+public class UserTransfer {
 
     public static UserVO getUserVO(UserDO userDO) {
         UserVO vo = new UserVO();

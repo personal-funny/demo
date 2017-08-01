@@ -1,7 +1,7 @@
 package com.air.dal.adapter.impl;
 
 import com.air.dal.adapter.ISample;
-import com.air.dal.adapter.transformer.UserMapper;
+import com.air.dal.adapter.transformer.UserTransfer;
 import com.air.dal.adapter.vo.UserVO;
 import com.air.dal.dao.SampleDAO;
 import com.air.dal.modal.UserDO;
@@ -20,22 +20,22 @@ public class SampleImpl implements ISample {
 
     @Override
     public void create(UserVO vo) {
-        sampleDAO.create(UserMapper.getUserDO(vo));
+        sampleDAO.create(UserTransfer.getUserDO(vo));
     }
 
     @Override
     public void delete(UserVO vo) {
-        sampleDAO.delete(UserMapper.getUserDO(vo));
+        sampleDAO.delete(UserTransfer.getUserDO(vo));
     }
 
     @Override
     public void update(UserVO vo) {
-        sampleDAO.update(UserMapper.getUserDO(vo));
+        sampleDAO.update(UserTransfer.getUserDO(vo));
     }
 
     @Override
     public UserVO get(long id) {
         UserDO userDO = sampleDAO.get(id);
-        return UserMapper.getUserVO(userDO);
+        return UserTransfer.getUserVO(userDO);
     }
 }
