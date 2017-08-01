@@ -14,12 +14,6 @@
     <artifactId>dal</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>com.air.adapter</groupId>
-            <artifactId>adapter</artifactId>
-            <version>${parent.version}</version>
-        </dependency>
-
         <!-- databases -->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>

@@ -1,4 +1,4 @@
-package com.air.dal.mapper;
+package com.air.dal.adapter.transformer;
 
 import com.air.dal.adapter.vo.UserVO;
 import com.air.dal.modal.UserDO;

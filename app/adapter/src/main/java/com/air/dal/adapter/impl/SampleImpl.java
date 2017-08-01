@@ -1,9 +1,9 @@
-package com.air.dal.impl;
+package com.air.dal.adapter.impl;
 
 import com.air.dal.adapter.ISample;
+import com.air.dal.adapter.transformer.UserMapper;
 import com.air.dal.adapter.vo.UserVO;
 import com.air.dal.dao.SampleDAO;
-import com.air.dal.mapper.UserMapper;
 import com.air.dal.modal.UserDO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
