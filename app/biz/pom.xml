@@ -20,8 +20,23 @@
             <version>${spring.boot.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.air.common</groupId>
+            <artifactId>common</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.air.adapter</groupId>
+            <artifactId>adapter</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
+        <dependency>
             <groupId>com.air.dal</groupId>
             <artifactId>dal</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.air.integration</groupId>
+            <artifactId>integration</artifactId>
             <version>${parent.version}</version>
         </dependency>
     </dependencies>

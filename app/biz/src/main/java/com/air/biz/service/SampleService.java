@@ -1,7 +1,7 @@
 package com.air.biz.service;
 
-import com.air.dal.dao.SampleDAO;
-import com.air.dal.modal.UserDO;
+import com.air.dal.adapter.ISample;
+import com.air.dal.adapter.vo.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,22 +13,22 @@ import org.springframework.stereotype.Service;
 public class SampleService {
 
     @Autowired
-    private SampleDAO sampleDAO;
+    private ISample sample;
 
-    public void create(UserDO user) {
-        sampleDAO.create(user);
+    public void create(UserVO user) {
+        sample.create(user);
     }
 
-    public void delete(UserDO user) {
-        sampleDAO.delete(user);
+    public void delete(UserVO user) {
+        sample.delete(user);
     }
 
-    public void update(UserDO user) {
-        sampleDAO.update(user);
+    public void update(UserVO user) {
+        sample.update(user);
     }
 
-    public UserDO get(long id) {
-        return sampleDAO.get(id);
+    public UserVO get(long id) {
+        return sample.get(id);
     }
 
 }

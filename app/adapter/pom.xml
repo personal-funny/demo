@@ -10,19 +10,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.air.integration</groupId>
-    <artifactId>integration</artifactId>
+    <groupId>com.air.adapter</groupId>
+    <artifactId>adapter</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>com.air.common</groupId>
-            <artifactId>common</artifactId>
-            <version>${parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.air.adapter</groupId>
-            <artifactId>adapter</artifactId>
-            <version>${parent.version}</version>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 

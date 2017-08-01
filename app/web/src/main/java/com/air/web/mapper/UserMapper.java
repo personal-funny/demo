@@ -1,6 +1,6 @@
 package com.air.web.mapper;
 
-import com.air.dal.modal.UserDO;
+import com.air.dal.adapter.vo.UserVO;
 import com.air.web.dto.UserDTO;
 
 /**
@@ -9,21 +9,21 @@ import com.air.web.dto.UserDTO;
  */
 public class UserMapper {
 
-    public static UserDTO getUserDTO(UserDO userDO) {
+    public static UserDTO getUserDTO(UserVO vo) {
         UserDTO dto = new UserDTO();
-        dto.setId(userDO.getId());
-        dto.setUserName(userDO.getUserName());
-        dto.setPassword(userDO.getPassword());
-        dto.setDescription(userDO.getDescription());
+        dto.setId(vo.getId());
+        dto.setUserName(vo.getUserName());
+        dto.setPassword(vo.getPassword());
+        dto.setDescription(vo.getDescription());
         return dto;
     }
 
-    public static UserDO getUserDO(UserDTO userDTO) {
-        UserDO userDO = new UserDO();
-        userDO.setId(userDTO.getId());
-        userDO.setUserName(userDTO.getUserName());
-        userDO.setPassword(userDTO.getPassword());
-        userDO.setDescription(userDTO.getDescription());
-        return  userDO;
+    public static UserVO getUserDO(UserDTO userDTO) {
+        UserVO vo = new UserVO();
+        vo.setId(userDTO.getId());
+        vo.setUserName(userDTO.getUserName());
+        vo.setPassword(userDTO.getPassword());
+        vo.setDescription(userDTO.getDescription());
+        return  vo;
     }
 }

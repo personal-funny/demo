@@ -1,13 +1,11 @@
 package com.air.web;
 
 import com.air.biz.service.SampleService;
-import com.air.dal.modal.UserDO;
+import com.air.dal.adapter.vo.UserVO;
 import com.air.web.dto.UserDTO;
 import com.air.web.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author lx48475
@@ -20,26 +18,26 @@ public class SampleApi {
     private SampleService sampleService;
 
     @RequestMapping(value = "/user", method = RequestMethod.POST)
-    public void saveUser(UserDTO dto) {
-        UserDO userDO = UserMapper.getUserDO(dto);
-        sampleService.create(userDO);
+    public void saveUser(@RequestBody UserDTO dto) {
+        UserVO vo = UserMapper.getUserDO(dto);
+        sampleService.create(vo);
     }
 
     @RequestMapping(value = "/user", method = RequestMethod.DELETE)
-    public void deleteUser(UserDTO dto) {
-        UserDO userDO = UserMapper.getUserDO(dto);
-        sampleService.delete(userDO);
+    public void deleteUser(@RequestParam UserDTO dto) {
+        UserVO vo = UserMapper.getUserDO(dto);
+        sampleService.delete(vo);
     }
 
     @RequestMapping(value = "/user", method = RequestMethod.PUT)
-    public void updateUser(UserDTO dto) {
-        UserDO userDO = UserMapper.getUserDO(dto);
-        sampleService.update(userDO);
+    public void updateUser(@RequestBody UserDTO dto) {
+        UserVO vo = UserMapper.getUserDO(dto);
+        sampleService.update(vo);
     }
 
-    @RequestMapping(value = "/user", method = RequestMethod.GET)
-    public UserDTO getUser(long id) {
-        UserDO user = sampleService.get(id);
+    @RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
+    public UserDTO getUser(@PathVariable("id") long id) {
+        UserVO user = sampleService.get(id);
         return UserMapper.getUserDTO(user);
     }
 
