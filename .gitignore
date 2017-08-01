@@ -45,5 +45,4 @@ catalina.home_IS_UNDEFINED
 .DS_Store
 Thumbs.db
 .sass-cache/
-/bin/
 /target/
