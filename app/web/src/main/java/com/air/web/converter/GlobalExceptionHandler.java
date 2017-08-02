@@ -2,7 +2,7 @@
  * LY.com Inc.
  * Copyright (c) 2004-2017 All Rights Reserved.
  */
-package com.air.common.converter;
+package com.air.web.converter;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

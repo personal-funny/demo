@@ -19,10 +19,17 @@
             <artifactId>web</artifactId>
             <version>${parent.version}</version>
         </dependency>
+
         <dependency>
-            <groupId>com.air.biz</groupId>
-            <artifactId>biz</artifactId>
-            <version>${parent.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <version>${spring.boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>

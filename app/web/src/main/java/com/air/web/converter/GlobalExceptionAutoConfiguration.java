@@ -1,4 +1,4 @@
-package com.air.common.converter;
+package com.air.web.converter;
 
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
